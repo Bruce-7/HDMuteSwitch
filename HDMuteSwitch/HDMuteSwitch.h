@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "HDSingleton.h"
 #include <AudioToolbox/AudioToolbox.h>
 
 @protocol HDMuteSwitchDelegate
