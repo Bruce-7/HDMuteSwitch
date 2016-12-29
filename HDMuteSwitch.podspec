@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "HDMuteSwitch"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "relatively straightforward to detect whether a device was muted by using an audio route to detect playback type. "
   s.homepage     = "https://github.com/Bruce-7/HDMuteSwitch.git"
   s.license      = "MIT"

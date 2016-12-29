@@ -24,7 +24,7 @@
 HDSingletonM(HDMuteSwitch)
 
 - (void)playbackComplete {
-    if ([self respondsToSelector:@selector(isMuted:)]) {
+    if ([(id)self.delegate respondsToSelector:@selector(isMuted:)]) {
         if (self.soundDuration < 0.010) {
             [self.delegate isMuted:YES];
         } else {
@@ -54,7 +54,7 @@ static void soundCompletionCallback (SystemSoundID mySSID, void *myself) {
 - (void)detectMuteSwitch:(void(^)(BOOL muted))muted {
 #if TARGET_IPHONE_SIMULATOR
     // The simulator doesn't support detection and can cause a crash so always return muted
-    if ([self respondsToSelector:@selector(isMuted:)]) {
+    if ([(id)self.delegate respondsToSelector:@selector(isMuted:)]) {
         [self.delegate isMuted:YES];
     }
     
